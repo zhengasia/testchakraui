@@ -1,14 +1,28 @@
-import { ColorModeScript } from '@chakra-ui/react';
+import { ChakraProvider, ColorModeScript, extendTheme } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import 'focus-visible/dist/focus-visible'
+// //启动页面，包含vim，Link
+// import App from './App';
+
+import App from './ui/UI1';
+
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
-
+const colors = {
+  brand:{
+    900: '#FF0000',
+    800: '#00F000',
+    700: '#2a69ac',
+  },
+}
+const theme = extendTheme({colors})
 ReactDOM.render(
   <StrictMode>
-    <ColorModeScript />
-    <App />
+    <ChakraProvider theme={theme}>
+      <ColorModeScript />
+      <App />
+    </ChakraProvider>
   </StrictMode>,
   document.getElementById('root')
 );

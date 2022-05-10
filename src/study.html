@@ -1,0 +1,24 @@
+1. 跳轉到外部鏈接
+<Link
+color="teal.500"
+href="https://chakra-ui.com"
+fontSize="2xl"
+target="_blank"
+rel="noopener noreferrer"
+>
+
+2.40vmin
+vmax和vmin都是相对于窗口大小的长度单位。
+100vmax相当于100%当前窗口长或者宽的长度，取其中最大值，vmin反之。
+如果css函数max()和min()普及后，100vmax相当于max(100vw, 100vh)
+
+
+3.主题配置
+   》默认主题
+   <ChakraProvider theme={theme}>
+       》如果想去掉默认主题的focus样式，需要rest-css。
+         yarn add focus-visible
+         import 'focus-visible/dist/focus-visible'在root（index.js)里
+   》
+
+
